@@ -1,44 +1,18 @@
 import React from 'react'
 import './App.css'
-import GuestLogin from './GuestLogin';
-import UserLogin from './UserLogin';
+import Front from './Front';
+import GuestLogin from './GuestLogin'
+import UserLogin from './UserLogin'
 
 const App = () => {
-  const [guest, setGuest] = React.useState(false);
-  const [user, setUser] = React.useState(false);
-
-  const Main = () => {
-    return(
-      <>
-      <main>
-        <p>Would you like to login as...</p>
-        <button onClick={showGuest}>Guest Login</button>
-        <button onClick={showUser}>User Login</button>
-      </main>
-      </>
-    );
-  }
-
-  const showGuest = () => {
-    setGuest(true);
-    setUser(false);
-  }
-
-  const showUser = () => {
-    setGuest(false);
-    setUser(true);
-  }
+  const [ guest, setGuest ] = React.useState(false);
+  const [ user, setUser ] = React.useState(false);
 
   return (
-    <div>
-      <header>
-        <h1>HI!</h1>
-        <h2>I am Abhigyan Chandra Rastogi,</h2>
-      </header>
-      {!(guest || user) && <Main />}
-      {guest && <GuestLogin />}
-      {user && <UserLogin />}
-      {(guest || user) && <button onClick={() => { setGuest(false);setUser(false); }}>Main</button>}
+    <div className='App'>
+      {!(guest || user) && <Front setGuest={setGuest} setUser={setUser}/>}
+      {guest && <GuestLogin setGuest={setGuest}/>}
+      {user && <UserLogin setUser={setUser}/>}
     </div>
   )
 }

@@ -1,0 +1,26 @@
+.Visit {
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    place-items: center;
+}
+
+h1 {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-right: 10px;
+}
+
+.Buttons {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: auto;
+    margin-left: 10px;
+    width: fit-content;
+}
+
+.Buttons button {
+    margin: 5px;
+    width: fit-content;
+}
