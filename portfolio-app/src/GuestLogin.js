@@ -6,7 +6,7 @@ const GuestLogin = ({ setGuest }) => {
       <header>
         <h2>Welcome Dear Guest</h2>
       </header>
-      <button onClick={()=>setGuest(false)}>Home</button>
+      <button className="Button" onClick={()=>setGuest(false)}>Home</button>
     </div>
   )
 }

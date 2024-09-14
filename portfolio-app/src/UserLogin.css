@@ -1,0 +1,30 @@
+.Login {
+    height: 50vh;
+}
+
+.Login>form {
+    width: min-content;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 35px;
+    justify-items: center;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.Login>form>label, .Login>form>.TextInput {
+    height: 35px;
+    margin: 0;
+}
+
+/* .Login>form>input {
+} */
+
+.Login>form>.Button {
+    margin: auto;
+    grid-column: 1/3;
+    width: fit-content;
+    height: fit-content;
+    padding: 30px;
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Front.css'
+import './CommonStyles.css'
 
 const Front = ({setGuest, setUser}) => {
     return (
@@ -15,8 +16,8 @@ const Front = ({setGuest, setUser}) => {
             <div className='Visit'>
                 <h1>Visit my website: </h1>
                 <div className='Buttons'>
-                    <button className='visitButton' onClick={()=>{setGuest(true)}}>As a Guest</button>
-                    <button className='visitButton' onClick={()=>{setUser(true)}}>As a User</button>
+                    <button className='Button' onClick={()=>{setGuest(true)}}>As a Guest</button>
+                    <button className='Button' onClick={()=>{setUser(true)}}>As a User</button>
                 </div>
             </div>
         </div>
